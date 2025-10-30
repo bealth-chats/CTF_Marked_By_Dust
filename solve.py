@@ -36,11 +36,10 @@ mark_word(used, 14, 0, 6, "h")
 # Mark ASHUR (length 5) at (14, 6)
 mark_word(used, 14, 6, 5, "h")
 
+unused_letters = ""
 for r in range(len(grid_from_image)):
-    line = ""
     for c in range(len(grid_from_image[0])):
         if not used[r][c]:
-            line += grid_from_image[r][c]
-        else:
-            line += " "
-    print(line)
+            unused_letters += grid_from_image[r][c]
+
+print(unused_letters)
